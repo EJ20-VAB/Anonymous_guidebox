@@ -131,3 +131,18 @@ label {
   border-radius: 5px;
   font-weight: bold;
 }
+
+/* 削除ボタンを赤色に */
+.delete-btn {
+  background-color: #dc3545; /* 赤色 */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
