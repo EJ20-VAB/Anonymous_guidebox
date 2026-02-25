@@ -1,14 +1,34 @@
-<p style="color: green"><%= notice %></p>
+<h1>フィードバック一覧</h1>
 
-<h1>Feedbacks</h1>
+<table class="feedback-table">
+  <thead>
+    <tr>
+      <th>種類</th>
+      <th>内容</th>
+      <th>対応ステータス</th>
+      <th>操作</th>
+    </tr>
+  </thead>
 
-<div id="feedbacks">
-  <% @feedbacks.each do |feedback| %>
-    <%= render feedback %>
-    <p>
-      <%= link_to "Show this feedback", feedback %>
-    </p>
-  <% end %>
-</div>
+  <tbody>
+    <% @feedbacks.each do |feedback| %>
+      <tr>
+        <td><span class="category-tag"><%= feedback.category %></span></td>
+        <td class="content-cell"><%= feedback.content %></td>
+        <td>
+          <span class="status-badge status-<%= feedback.status %>">
+            <%= feedback.status %>
+          </span>
+        </td>
+        <td class="action-links">
+          <%= link_to "詳細", feedback %>
+          <%= link_to "編集", edit_feedback_path(feedback) %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to "New feedback", new_feedback_path %>
+<br>
+
+<%= link_to "新規フィードバック投稿", new_feedback_path, class: "new-btn" %>

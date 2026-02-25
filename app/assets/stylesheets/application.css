@@ -78,3 +78,56 @@ label {
 .status-未対応 { background-color: #ffcccc; color: #cc0000; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
 .status-対応中 { background-color: #fff3cd; color: #856404; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
 .status-完了 { background-color: #d4edda; color: #155724; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+
+/* テーブル全体のスタイル */
+.feedback-table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse; /* 枠線を一本にする */
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.feedback-table th, .feedback-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.feedback-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #555;
+}
+
+/* 内容カラムが長くなりすぎないように調整 */
+.content-cell {
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+/* 操作リンクの装飾 */
+.action-links a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 0.9em;
+}
+
+.action-links a:hover {
+  text-decoration: underline;
+}
+
+/* 新規投稿ボタンをボタンらしく */
+.new-btn {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
