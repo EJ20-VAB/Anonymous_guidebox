@@ -74,3 +74,7 @@ label {
   font-weight: bold;
   color: #495057;
 }
+
+.status-未対応 { background-color: #ffcccc; color: #cc0000; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+.status-対応中 { background-color: #fff3cd; color: #856404; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+.status-完了 { background-color: #d4edda; color: #155724; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
