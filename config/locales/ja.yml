@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+      feedback:
+        category: "種類"
+        content: "内容"
