@@ -3,8 +3,10 @@
 <%= render @feedback %>
 
 <div>
-  <%= link_to "Edit this feedback", edit_feedback_path(@feedback) %> |
-  <%= link_to "Back to feedbacks", feedbacks_path %>
+  <%= link_to "編集する", edit_feedback_path(@feedback) %> |
+  <%= link_to "一覧に戻る", feedbacks_path %>
 
-  <%= button_to "Destroy this feedback", @feedback, method: :delete %>
+  <div style="margin-top: 20px;">
+    <%= button_to "この投稿を削除する", @feedback, method: :delete, data: { confirm: "本当に削除しますか？" }, class: "delete-btn" %>
+  </div>
 </div>

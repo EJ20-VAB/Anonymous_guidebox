@@ -10,11 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2026_02_25_074751) do
+ActiveRecord::Schema[7.1].define(version: 2026_02_25_081139) do
   create_table "feedbacks", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "category"
+    t.string "status"
+    t.string "default"
+    t.string "未対応"
   end
 
 end

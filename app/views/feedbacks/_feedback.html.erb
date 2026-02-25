@@ -1,7 +1,17 @@
 <div id="<%= dom_id feedback %>">
   <p>
-    <strong>Content:</strong>
+    <strong>内容:</strong>
     <%= feedback.content %>
   </p>
 
 </div>
+
+<p>
+  <strong>種類:</strong>
+  <%= feedback.category %>
+</p>
+
+<p>
+  <strong>対応ステータス:</strong>
+  <span class="status-<%= feedback.status %>"><%= feedback.status %></span>
+</p>

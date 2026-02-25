@@ -13,3 +13,136 @@
  *= require_tree .
  *= require_self
  */
+/* 全体のレイアウト */
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background-color: #f8f9fa;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 中央寄せ */
+}
+
+/* カード部分 */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 450px; /* 横幅を固定 */
+}
+
+/* 入力要素（セレクトボックスとテキストエリア）の幅を揃える */
+select, textarea {
+  width: 100%; /* 親要素(form)の幅いっぱいに広げる */
+  padding: 12px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box; /* パディングを含めたサイズ計算 */
+  font-size: 16px;
+}
+
+/* テキストエリアの高さを少し出す */
+textarea {
+  height: 120px;
+  resize: vertical; /* 縦方向のみリサイズ可 */
+}
+
+/* ボタンも幅を合わせる */
+input[type="submit"] {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* ラベルを太字に */
+label {
+  font-weight: bold;
+  color: #495057;
+}
+
+.status-未対応 { background-color: #ffcccc; color: #cc0000; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+.status-対応中 { background-color: #fff3cd; color: #856404; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+.status-完了 { background-color: #d4edda; color: #155724; padding: 2px 8px; border-radius: 4px; font-weight: bold; }
+
+/* テーブル全体のスタイル */
+.feedback-table {
+  width: 100%;
+  max-width: 900px;
+  border-collapse: collapse; /* 枠線を一本にする */
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.feedback-table th, .feedback-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.feedback-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #555;
+}
+
+/* 内容カラムが長くなりすぎないように調整 */
+.content-cell {
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+/* 操作リンクの装飾 */
+.action-links a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 0.9em;
+}
+
+.action-links a:hover {
+  text-decoration: underline;
+}
+
+/* 新規投稿ボタンをボタンらしく */
+.new-btn {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* 削除ボタンを赤色に */
+.delete-btn {
+  background-color: #dc3545; /* 赤色 */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
